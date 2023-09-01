@@ -5,9 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- SET TITLE -->
-        <title>Tim's Portfolio</title>
-        <!-- LINK STYLESHEETS -->
+        <title>Tim NIGG | Portfolio</title>
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
@@ -17,35 +15,97 @@
 
         <!-- Top Banner/Navigation -->
         <header>
-            <h1><!--TITLE HERE --></h1>
-            <nav>
+            <h1>Tim Nigg</h1>
+            <nav class="nav-top">
                 <menu>
-                    <li><!--MENU ITEM HERE --></li>
-                    <li><!--MENU ITEM HERE --></li>
-                    <li><!--MENU ITEM HERE --></li>
+                    <!-- MENU/LINK FUNCTIONALITY -->
+                    <li>About</li>
+                    <li>Work</li>
+                    <li>Contact</li>
                 </menu>
             </nav>
         </header>
 
         <!-- Main Content -->
         <main>
-            <section>
-
+            <section class="about">
+                <h2>About Me</h2>
+                    <div class="intro">
+                        <p>Hello! My name is</p>
+                        <p>Tim NIGG,</p>
+                        <p>I am a [future] full-stack developer.</p>
+                    </div>
+                    <div class="headshot">
+                        <img src="assets/images/blank_man_placeholder_200px2.png" alt="My mug"/>
+                    </div>
+                    <div class="details">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam donec adipiscing tristique risus nec.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo laoreet sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices vitae auctor eu augue ut lectus.</p>
             </section>
-            <section>
-
+            <section class="work">
+                <h2>My Work</h2>
+                <div class="project-img">
+                    <img src="https://picsum.photos/300?random=1" alt="Placeholder image"/>
+                </div>
+                <div class="project-img">
+                    <img src="https://picsum.photos/300?random=2" alt="Placeholder image"/>
+                </div>
+                <div class="project-img">
+                    <img src="https://picsum.photos/300?random=3" alt="Placeholder image"/>
+                </div>
+                <div class="project-img">
+                    <img src="https://picsum.photos/300?random=4" alt="Placeholder image"/>
+                </div>
+                <div class="project-img">
+                    <img src="https://picsum.photos/300?random=5" alt="Placeholder image"/>
+                </div>
             </section>
-            <section>
-
+            <section class="contact">
+                <h2>Contact Me</h2>
+                <p>Please complete the form</p>
+                <form id="contact_form">
+                    <!-- TO-DO: Set form ACTION and METHOD, investigate benefit of FORM over UL element-->
+                    <li>
+                        <label for="firstName">First Name:</label>
+                        <input id="firstName" name="user_firstName" type="text" autocomplete="given-name"/>
+                    </li>
+                    <li>
+                        <label for="lastName">Last Name:</label>
+                        <input id="lastName" name="user_lastName" type="text" autocomplete="family-name"/>
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input id="email" name="user_email" type="email" autocomplete="email"/>
+                    </li>
+                    <li>
+                        <!-- TO-DO: Make the message on the textbox disappear when typing, make LABEL redundant-->
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message">Please leave a message here!</textarea>
+                    </li>
+                    <li class="botton">
+                        <!-- TO-DO: Check on FORM attribute-->
+                        <button type="submit" form="contact_form">Send!</button>
+                    </li>
+                </form>
             </section>
-            <aside>
+
+            <aside class="side-bar">
+                <nav class="nav-side">
+                    <menu>
+                        <!-- MENU/LINK FUNCTIONALITY -->
+                        <li>About</li>
+                        <li>Work</li>
+                        <li>Contact</li>
+                    </menu>
+                </nav>
                 
             </aside>
         </main>
 
         <!-- Footer -->
         <footer>
-
+            <p class="footnote">Homemade with <span class="heart">&#10084</span>, &copy 2023</p>
         </footer>
 
     </body>
