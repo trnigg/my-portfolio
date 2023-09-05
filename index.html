@@ -15,92 +15,122 @@
 
         <!-- Top Banner/Navigation -->
         <header>
-            <h1>Tim Nigg</h1>
-            <nav class="nav-top">
-                <menu>
-                    <!-- MENU/LINK FUNCTIONALITY -->
-                    <li>About</li>
-                    <li>Work</li>
-                    <li>Contact</li>
-                </menu>
-            </nav>
+            <div class="header-content">
+                <h1>Welcome!</h1>
+                <nav class="nav-top">
+                    <menu>
+                        <!-- MENU/LINK FUNCTIONALITY -->
+                        <li>
+                            <a href="#about-section">About</a>
+                        </li>
+                        <li>
+                            <a href="#work-section">Work</a>
+                        </li>
+                        <li>
+                            <a href="#contact-section">Contact</a>
+                        </li>
+                    </menu>
+                </nav>
+            </div>
         </header>
 
         <!-- Main Content -->
         <main>
-            <section class="about">
-                <h2>About Me</h2>
+            <section id="about-section">
+                <div class="section-heading-container">
+                    <h2 class="section-header" id="about-header">About Me</h2>
+                </div>
+                <div class="section-content-container" id="about-content">
                     <div class="intro">
-                        <p>Hello! My name is</p>
-                        <p>Tim NIGG,</p>
-                        <p>I am a [future] full-stack developer.</p>
+                        <p id="p-start">Hello! I am</p>
+                        <p id="p-center">Tim Nigg,</p>
+                        <p id="p-end">[future] full-stack dev.</p>
                     </div>
                     <div class="headshot">
                         <img src="assets/images/blank_man_placeholder_200px2.png" alt="My mug"/>
                     </div>
                     <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam donec adipiscing tristique risus nec.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo laoreet sit amet.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices vitae auctor eu augue ut lectus.</p>
-            </section>
-            <section class="work">
-                <h2>My Work</h2>
-                <div class="project-img">
-                    <img src="https://picsum.photos/300?random=1" alt="Placeholder image"/>
-                </div>
-                <div class="project-img">
-                    <img src="https://picsum.photos/300?random=2" alt="Placeholder image"/>
-                </div>
-                <div class="project-img">
-                    <img src="https://picsum.photos/300?random=3" alt="Placeholder image"/>
-                </div>
-                <div class="project-img">
-                    <img src="https://picsum.photos/300?random=4" alt="Placeholder image"/>
-                </div>
-                <div class="project-img">
-                    <img src="https://picsum.photos/300?random=5" alt="Placeholder image"/>
-                </div>
-            </section>
-            <section class="contact">
-                <h2>Contact Me</h2>
-                <p>Please complete the form</p>
-                <form id="contact_form">
-                    <!-- TO-DO: Set form ACTION and METHOD, investigate benefit of FORM over UL element-->
-                    <li>
-                        <label for="firstName">First Name:</label>
-                        <input id="firstName" name="user_firstName" type="text" autocomplete="given-name"/>
-                    </li>
-                    <li>
-                        <label for="lastName">Last Name:</label>
-                        <input id="lastName" name="user_lastName" type="text" autocomplete="family-name"/>
-                    </li>
-                    <li>
-                        <label for="email">Email:</label>
-                        <input id="email" name="user_email" type="email" autocomplete="email"/>
-                    </li>
-                    <li>
-                        <!-- TO-DO: Make the message on the textbox disappear when typing, make LABEL redundant-->
-                        <label for="msg">Message:</label>
-                        <textarea id="msg" name="user_message">Please leave a message here!</textarea>
-                    </li>
-                    <li class="botton">
-                        <!-- TO-DO: Check on FORM attribute-->
-                        <button type="submit" form="contact_form">Send!</button>
-                    </li>
-                </form>
+                        <p>I enjoy simple design, white space and walks on the beach. My creativity is limited by my capability (not my imagination!), so keep and eye on this portfolio as it grows with me!
+                        </p>
+                    </div>
             </section>
 
-            <aside class="side-bar">
-                <nav class="nav-side">
-                    <menu>
-                        <!-- MENU/LINK FUNCTIONALITY -->
-                        <li>About</li>
-                        <li>Work</li>
-                        <li>Contact</li>
-                    </menu>
-                </nav>
+            <section id="work-section">
+                <div class="section-heading-container">
+                    <h2 class="section-header" id="work-header">My Work</h2>
+                </div>
+                <div class="section-content-container" id="work-content">
+                    <div class="featured img-container">
+                        <img class="featured-img" src="https://picsum.photos/300?random=1" alt="Placeholder image"/>
+                    </div>
+                    <div class="project img-container">
+                        <img class="project-img" src="https://picsum.photos/300?random=2" alt="Placeholder image"/>
+                    </div>
+                    <div class=" project img-container">
+                        <img class="project-img" src="https://picsum.photos/300?random=3" alt="Placeholder image"/>
+                    </div>
+                    <div class="project img-container">
+                        <img class="project-img" src="https://picsum.photos/300?random=4" alt="Placeholder image"/>
+                    </div>
+                    <div class="project img-container">
+                        <img class="project-img" src="https://picsum.photos/300?random=5" alt="Placeholder image"/>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-section">
+                <div class="section-heading-container">
+                    <h2>Contact Me</h2>
+                </div>
+                <div class="section-content-container" id="contact-content">
+                    <p>Please complete the form below or reach out on one of my socials!</p>
+                    <form id="contact_form">
+                        <!-- TO-DO: Set form ACTION and METHOD, investigate benefit of FORM over UL element-->
+                        <!-- <ul> -->
+                            <li>
+                                <label for="firstName">First Name:</label>
+                                <input id="firstName" name="user_firstName" type="text" placeholder="First name" autocomplete="given-name"/>
+                            </li>
+                            <li>
+                                <label for="lastName">Last Name:</label>
+                                <input id="lastName" name="user_lastName" type="text" placeholder="Last name" autocomplete="family-name"/>
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input id="email" name="user_email" type="email" placeholder="Email" autocomplete="email"/>
+                            </li>
+                            <li>
+                                <!-- TO-DO: Make the message on the textbox disappear when typing, make LABEL redundant-->
+                                <label for="msg">Message:</label>
+                                <textarea id="msg" name="user_message" placeholder="Please leave a message here!"></textarea>
+                            </li>
+                            <li class="button">
+                                <!-- TO-DO: Check on FORM attribute-->
+                                <button type="submit" form="contact_form">Send!</button>
+                            </li>
+                        <!-- </ul> -->
+                    </form>
+                    <div id="socials-content">
+                        <h3>My socials:</h3>
+                        <div class="links-container">
+                            <ul id="social-links">
+                                <li>
+                                    <a href="https://github.com/trnigg">GitHub</a>
+                                </li>
+                                <li>
+                                    <a href="#work-section">Link 2</a>
+                                </li>
+                                <li>
+                                    <a href="#contact-section">Link 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 
-            </aside>
+            </section>
+
+            
         </main>
 
         <!-- Footer -->
