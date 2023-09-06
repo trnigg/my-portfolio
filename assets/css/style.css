@@ -38,7 +38,7 @@ header {
     background-color: rgb(80, 80, 80);
     color: whitesmoke;
     border-bottom: .4rem solid gold;
-    margin-bottom: 3.2rem;
+    margin-bottom: 9.6rem;
 }
 
 .header-content {
@@ -86,7 +86,7 @@ section {
     width: 100%;
     padding: 0 2rem;
     display: block;
-    margin: 0 auto 3.2rem;
+    margin: 0 auto 9.6rem;
 }
 
 .section-heading-container {
@@ -109,9 +109,6 @@ section {
 
 /* About Me Section */
 
-/* #about-content div {
-    margin-bottom: 2.4rem;
-} */
 
 .intro {
     display: flex;
@@ -136,8 +133,20 @@ div .headshot {
     margin: 1rem 0;
 }
 
+#little-me {
+    width: 100%;
+    max-height: 32rem;
+    object-fit: cover;
+    margin: 0 auto;
+    border: .3rem solid grey;
+}
+
+
 /* My Work Section*/
+
+    /* Image containers */
 .img-container {
+    position: relative;
     width: 100%;
     border: .3rem solid gold;
 }
@@ -148,16 +157,46 @@ div .headshot {
 
 .project.img-container {
     height: 16rem;
-    margin-top: 1rem;
+    margin-top: 2.4rem;
 }
 
+    /* Image positioning */
 .project-img, .featured-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 } 
 
+.featured-img {
+    object-position: top left;
+} 
+
+.project-img {
+    object-position: center;
+}
+
+    /* Image captioning */
+        /* In future: Revisit captions, possibly animate on hover */
+figcaption {
+    position: absolute;
+    bottom: 0; /* needd to vertically center this beter*/
+    left: 0; /* Align the caption to the left */
+    background-color: rgb(80, 80, 80, 0.9) ; /* Semi-transparent background for readability */
+    color: #fff; /* Text color */
+    padding: 10px; /* Add some padding to the caption */
+    width: 100%; /* need to tweak width and add a queery*/
+    text-align: start;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+figcaption span {
+    display: block;
+    padding:  .6rem 0 0 .6rem;
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+    
 /* Contact Me Section */
 #contact-content p {
     margin-bottom: 2.4rem;
@@ -184,7 +223,6 @@ button {
     margin-bottom: 3.2rem;
 }
 
-
 #socials-content {
     width: 100%;
     margin: 0 auto;
@@ -208,22 +246,8 @@ button {
     border-bottom: .2rem solid gold;
     width: 7rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
-
-
-
-/* bottom border added to list items rather than links (a) in order to set a consistent width
-menu li {
-    border-bottom: .2rem solid gold;
-    width: 7rem;
-    text-align: center;
-    font-size: 2rem;
-} */
-
-
-/* Other */
-
 
 footer p {
     text-align: end;
@@ -238,35 +262,33 @@ footer p {
     .header-content {
         flex-direction: row;
     }
-
     .section-heading-container {
         flex-direction: row;
         border-right: .5rem solid grey;
         border-bottom: none;
         margin-bottom: 0rem;
+        position: relative;
     }
-
     section {
         display: grid;
         grid-template-columns: 10rem 1fr;
-        margin: 3.2rem auto;
+        margin: 0 auto 9.6rem auto;
     }
-
     h2 {
-        transform-origin: left bottom;
+        transform-origin: right top;
         transform: rotate(270deg);
         position: absolute;
+        top: 1.2rem; /* I don't actually know what i'm doing here or with transfrom origin, i've just been Fa/Fo-ing */
+        right: 3.2rem; /* Now that i have it somewhat positioned, i'm having text overlap */
     }
-
     .section-content-container {
     padding-left: 3.2rem;
     width: 100%;
     }
 
-
     /* My Work Layout */
-    /* In the near future, this can be cleaned up with aspec-ratio unit */
-    /*  Rather than "space between" and 49% container width, set a consistent 1rem space between*/
+        /* In the near future, this can be cleaned up with aspec-ratio unit */
+        /*  Rather than "space between" and 48% container width, set a consistent 1rem space between*/
     #work-content {
         flex-flow: row wrap ;
         justify-content: space-between;
@@ -281,7 +303,7 @@ footer p {
     }
 
     .project.img-container {
-        width: 49%;
+        width: 48%;
         height: 32rem;
     }
     
@@ -291,7 +313,12 @@ footer p {
         object-fit: cover;
     } 
 
-
-
+    .featured.img-container figcaption {
+        width: 23.8%; /* Width set as slight less than half project image to appear same size. 
+                            TODO: need to calculate width as an exact proportion - currently off by <1px  */
+    }
+    .project.img-container figcaption {
+        width: 50%;
+    }
 }
 
