@@ -5,29 +5,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tim NIGG | Portfolio</title>
+        <title>Tim Nigg | Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,300&display=swap">
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
 
     <!-- Content -->
     <body>
-
         <!-- Top Banner/Navigation -->
         <header>
             <div class="header-content">
                 <h1>Welcome!</h1>
                 <nav class="nav-top">
                     <menu>
-                        <!-- MENU/LINK FUNCTIONALITY -->
+                        <!-- Menu/Links: (link to header container for better centering when link followed) -->
                         <li>
-                            <a href="#about-section">About</a>
+                            <a href="#about-heading-container">About</a>
                         </li>
                         <li>
-                            <a href="#work-section">Work</a>
+                            <a href="#work-heading-container">Work</a>
                         </li>
                         <li>
-                            <a href="#contact-section">Contact</a>
+                            <a href="#contact-heading-container">Contact</a>
                         </li>
                     </menu>
                 </nav>
@@ -37,26 +39,26 @@
         <!-- Main Content -->
         <main>
             <section id="about-section">
-                <div class="section-heading-container">
+                <div class="section-heading-container" id="about-heading-container">
                     <h2 class="section-header" id="about-header">About Me</h2>
                 </div>
                 <div class="section-content-container" id="about-content">
                     <div class="intro">
-                        <p id="p-start"><span id="console">console</span><span id="log">.log</span><span class="bracket">(</span>"Hello World! I am"<span class="bracket">);</span></p>
+                        <p id="p-start"><span id="console">console</span><span id="log">.log</span>("Hello World! I am");</p>
                         <p id="p-center">Tim Nigg</p>
-                        <p id="p-end">&lt<span id="future-code">future</span>&gtfull-stack.dev&lt/<span id="future-code">future</span>&gt</p>
+                        <p id="p-end">&lt<span class="future-code">future</span>&gtfull-stack.dev&lt/<span class="future-code">future</span>&gt</p>
                     </div>
                     <div class="headshot">
                         <img id="little-me" src="assets/images/MiniMe.jpeg" alt="My mug"/>
                     </div>
                     <div class="details">
-                        <p>I enjoy simple design, white space and walks on the beach. My creativity is not limited by imagination, so keep and eye on this portfolio as it grows with my capabilities!
+                        <p>I enjoy simple design, white space and walks on the beach. My creativity is not limited by my imagination, so keep an eye on this portfolio as it grows with me and my capabilities!
                         </p>
                     </div>
             </section>
 
             <section id="work-section">
-                <div class="section-heading-container">
+                <div class="section-heading-container" id="work-heading-container">
                     <h2 class="section-header" id="work-header">My Work</h2>
                 </div>
                 <!-- TO DO add atrribution:  -->
@@ -96,8 +98,8 @@
             </section>
 
             <section id="contact-section">
-                <div class="section-heading-container">
-                    <h2>Contact Me</h2>
+                <div class="section-heading-container" id="contact-heading-container">
+                    <h2 class="section-header" id="contact-header">Contact Me</h2>
                 </div>
                 <div class="section-content-container" id="contact-content">
                     <p>Please complete the form below or reach out on one of my socials!</p>
@@ -132,13 +134,13 @@
                         <div class="links-container">
                             <ul id="social-links">
                                 <li>
-                                    <a href="https://github.com/trnigg">GitHub</a>
+                                    <a href="https://github.com/trnigg" target="_blank">GitHub</a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/home">Twitter</a>
+                                    <a href="https://twitter.com/home" target="_blank">Twitter</a>
                                 </li>
                                 <li>
-                                    <a href="https://au.linkedin.com/">LinkedIn</a>
+                                    <a href="https://au.linkedin.com/" target="_blank">LinkedIn</a>
                                 </li>
                             </ul>
                         </div>
@@ -146,15 +148,12 @@
                 </div>
                 
             </section>
-
-            
         </main>
 
         <!-- Footer -->
         <footer>
             <p class="footnote">Homemade with <span class="heart">&#10084</span>, &copy 2023</p>
         </footer>
-
     </body>
 
 </html>

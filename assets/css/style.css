@@ -2,43 +2,52 @@
 
 
 /* Root Styles */
+:root {
+    --main-colour: #f9f9f9; /* Cool Off-White */
+    --secondary-colour: #292C33; /* Dark Anthracite */
+    --accent-colour: #c4a747; /* Metallic Gold Desaturated*/
 
+}
 
 /* General Font Styles */
 
 body {
-    font-size: 1.6rem;
-    font-family: "Bahnschrift", Verdana, "Geneva", Tahoma, sans-serif;
-    background-color: whitesmoke;
+    font-size: 1.8rem; /*After reset = 18px - slightly larger to accomodate lighter font */
+    font-family: "Nunito","Bahnschrift", "Geneva", sans-serif;
+    background-color: var(--main-colour);
 }
 
-h1, h2, h3 {
-  margin: 1.6rem;
+h1, h2, h3 {   /* need to fix vertical alignment of h1 */
+    margin-bottom: 2.4rem;
+    margin-top: 2.4rem;
   /* font-weight: 500; */
-  line-height: 1.1rem;
+    line-height: 1.1rem;
+    font-weight: lighter;
+}
+
+h2, h3 {
+    color: var(--secondary-colour);
 }
 
 h1 {
-  font-size: 4rem;
-  /* display: none; */
+    font-size: 4rem;
 }
 
 h2 {
-  font-size: 3.2rem;
+    font-size: 3.2rem;
 }
 
 h3 {
-  font-size: 2.4rem;
-  margin-bottom: 2.4rem;
+    font-size: 2.4rem;
 }
 
 
 /* Top Banner */
 header {
-    background-color: rgb(80, 80, 80);
-    color: whitesmoke;
-    border-bottom: .4rem solid gold;
-    margin-bottom: 9.6rem;
+    background-color: var(--secondary-colour);
+    color: var(--main-colour);
+    border-bottom: .3rem solid var(--accent-colour);
+    margin-bottom: 7.2rem;
 }
 
 .header-content {
@@ -46,7 +55,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 3.2rem;
     max-width: 96rem;
     margin: 0 auto;
 }
@@ -64,16 +73,18 @@ menu {
     */
 }
 
-/* bottom border added to list items rather than links (a) in order to set a consistent width */
 menu li {
-    border-bottom: .2rem solid gold;
+    border-bottom: .2rem solid var(--accent-colour); /* bottom border added to list items rather than links (a) in order to set a consistent width */
     width: 7rem;
     text-align: center;
     font-size: 2rem;
 }
 
-/* General Sections */
+menu li:hover {
+    color: var(--accent-colour);
+}
 
+/* General Sections */
 main {
     margin: 0 auto;
     padding: 0;
@@ -84,7 +95,7 @@ main {
 
 section {
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 3.2rem;
     display: block;
     margin: 0 auto 9.6rem;
 }
@@ -94,8 +105,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: .5rem solid grey;
-    margin-bottom: 2.4rem;
+    border-bottom: .3rem solid var(--accent-colour);
+    margin-bottom: 3.6rem;
 }
 
 .section-content-container {
@@ -108,12 +119,16 @@ section {
 }
 
 /* About Me Section */
-
-
 .intro {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+#p-start, #p-end {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+    font-weight: normal;
 }
 
 #p-start {
@@ -123,14 +138,27 @@ section {
 #p-center {
     font-size: 2.4rem;
     text-align: center;
+    margin: 1rem 0;
 }
 
 #p-end {
     text-align: end;
 }
 
+#console {
+    color: rgb(255, 0, 128);
+}
+
+#log {
+    color: rgb(255, 51, 0);
+}
+
+.future-code {
+    color: blue;
+}
+
 div .headshot {
-    margin: 1rem 0;
+    margin: 2.4rem 0;
 }
 
 #little-me {
@@ -138,9 +166,8 @@ div .headshot {
     max-height: 32rem;
     object-fit: cover;
     margin: 0 auto;
-    border: .3rem solid grey;
+    border: .3rem solid var(--secondary-colour);
 }
-
 
 /* My Work Section*/
 
@@ -148,7 +175,7 @@ div .headshot {
 .img-container {
     position: relative;
     width: 100%;
-    border: .3rem solid gold;
+    border: .3rem solid var(--secondary-colour);
 }
  
 .featured.img-container {
@@ -176,13 +203,13 @@ div .headshot {
 }
 
     /* Image captioning */
-        /* In future: Revisit captions, possibly animate on hover */
+        /* This is something i want to overhaul in future, especially on small viewports */
 figcaption {
     position: absolute;
     bottom: 0; /* needd to vertically center this beter*/
     left: 0; /* Align the caption to the left */
-    background-color: rgb(80, 80, 80, 0.9) ; /* Semi-transparent background for readability */
-    color: #fff; /* Text color */
+    background-color: var(--secondary-colour) ; /* TODO: Make semi-transparent background for readability */
+    color: var(--main-colour); 
     padding: 10px; /* Add some padding to the caption */
     width: 100%; /* need to tweak width and add a queery*/
     text-align: start;
@@ -196,12 +223,25 @@ figcaption span {
     font-size: 1.4rem;
     font-weight: lighter;
 }
-    
+
+    /* Image-link hover effects */
+.img-container:hover {
+    border: .3rem solid var(--accent-colour);
+    transition: all 0.3s ease-in;
+}
+ 
+.img-container:hover figcaption {
+    color: var(--secondary-colour);
+    background-color: var(--accent-colour);
+    transition: all 0.3s ease-in;
+}
+ 
 /* Contact Me Section */
 #contact-content p {
     margin-bottom: 2.4rem;
 }
 
+    /* Form (currently has no function, nor custom styling) */
 form {
     width: 100%;
     display: flex;
@@ -215,7 +255,12 @@ form li {
 
 input, textarea {
     padding: 1rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+textarea {
+    padding: 1rem;
+    margin-bottom: 3.6rem;
 }
 
 button {
@@ -223,6 +268,7 @@ button {
     margin-bottom: 3.2rem;
 }
 
+    /* Socials */
 #socials-content {
     width: 100%;
     margin: 0 auto;
@@ -243,19 +289,31 @@ button {
 }
 
 #social-links li {
-    border-bottom: .2rem solid gold;
+    border-bottom: .2rem solid var(--accent-colour);
     width: 7rem;
     text-align: center;
     font-size: 1.6rem;
 }
 
+#social-links li:hover {
+    border-bottom: .2rem solid var(--secondary-colour);
+}
+
+/* Footer */
 footer p {
     text-align: end;
     padding: 0 1rem 1rem 0;
 }
 
+.heart {
+    color: var(--accent-colour);
+    font-size: 2.4rem;
+    /* Animate this in the future */
+}
 
-/* Queries */
+
+
+/* Queries - Desktop and Tablet Layout*/
 
     /* General Layout */
 @media screen and (min-width: 768px) { 
@@ -264,40 +322,38 @@ footer p {
     }
     .section-heading-container {
         flex-direction: row;
-        border-right: .5rem solid grey;
+        border-right: .3rem solid var(--accent-colour);
         border-bottom: none;
-        margin-bottom: 0rem;
-        position: relative;
+        margin: -2rem 0rem; /* negative-margin drags vertical border longer (beyond content height) */
+        position: relative; /*required for positioning of H2 */
     }
     section {
         display: grid;
-        grid-template-columns: 10rem 1fr;
-        margin: 0 auto 9.6rem auto;
+        grid-template-columns: 6rem 1fr;
+        margin: 0 auto 12.8rem auto;
     }
     h2 {
         transform-origin: right top;
         transform: rotate(270deg);
-        position: absolute;
-        top: 1.2rem; /* I don't actually know what i'm doing here or with transfrom origin, i've just been Fa/Fo-ing */
-        right: 3.2rem; /* Now that i have it somewhat positioned, i'm having text overlap */
+        position: absolute; /* Absolute to the container (relative) */
+        width: 22rem; /* An arbitrary width wider than heading container to prevent text-wrap */
+        text-align: end; /* Because of above, and to vertically aligne from the top, text needs to start at the end */
+        top: 0.2rem; /* values determined by trial/error using DevTools  */
+        right: 4.2rem; /* values determined by trial/error using DevTools  */
     }
     .section-content-container {
-    padding-left: 3.2rem;
-    width: 100%;
+        padding-left: 3.2rem;
+        width: 100%;
     }
 
     /* My Work Layout */
-        /* In the near future, this can be cleaned up with aspec-ratio unit */
+        /* In the near future, this can be cleaned up with aspect-ratio unit */
         /*  Rather than "space between" and 48% container width, set a consistent 1rem space between*/
     #work-content {
         flex-flow: row wrap ;
         justify-content: space-between;
     }
 
-    .img-container {
-        border: .3rem solid gold;
-    }
-        
     .featured-img.img-container {
         width: 100%;
     }
@@ -317,6 +373,7 @@ footer p {
         width: 23.8%; /* Width set as slight less than half project image to appear same size. 
                             TODO: need to calculate width as an exact proportion - currently off by <1px  */
     }
+
     .project.img-container figcaption {
         width: 50%;
     }
