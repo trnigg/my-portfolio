@@ -4,21 +4,16 @@
 ## Description
 
 - The goal of this project was to create a first version of my portfolio to introduce myself and to showcase a growing collection of my work, with links that take you to that work.
-- This was achieved by building a basic webpage from scracth  using HTML and CSS.
+- This was achieved by building a basic webpage from scratch using HTML and CSS.
 - Code was written semantically where possible, and the styling was designed mobile-first and to be responsive (with a breakpoint for larger screens) in order to facilitate accessibility and usability.
 - A Contact me section was included, with a form and links to my socials, so that people can get in touch with me.
-- This is just the first version of the portfolio and the styling, interactivity and funcionality will develop over time.
+- This is just the first version of the portfolio and the styling, interactivity and functionality  will develop over time.
 
 ### Mobile Appearance:
-![Screenshot of the porfolio in mobile view](mobile.png)
+![Screenshot of the portfolio in mobile view](./assets/images/portfolio-screenshots/mobile.png)
 
 ### Desktop Appearance:
-![Screenshot of the porfolio in desktop view](desktop.png)
-
-
-
-
-
+![Screenshot of the portfolio in desktop view](./assets/images/portfolio-screenshots/desktop.png)
 
 ## Installation/Usage
 
